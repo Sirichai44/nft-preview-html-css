@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    background-color: var(--Very-dark-blue-main-BG);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card{
+    max-width: 1440px;
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    background-color: var(--Very-dark-blue-card-BG);
+}
+.nft{
+    display: block;
+    margin: 1.1rem auto 1.1rem;
+    width: 250px;
+    border-radius: 5px;
+}
+.nft-card{
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+.view{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.nft-card:hover .overlay{
+    cursor: pointer;
+    background-color: var(--Cyan);
+    margin: 0 auto 1.1rem;
+    width: 250px;
+    border-radius: 5px;
+    opacity: .2;
+}
+h3{
+    color: var(--White);
+    /* border: 1px solid red; */
+    padding: 0 1.3rem;
+}
+h3:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
+
+.info p{
+    width: 300px;
+    color: var(--Soft-blue);
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: .8rem;
+    padding: 1rem 1.3rem 0;
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin: 0 1.3rem;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+.price-eth{
+    display: flex;
+    align-items: center;
+    color: var(--Cyan);
+
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    color: var(--Soft-blue);
+}
+.price span{
+    font-size: .8rem;
+    padding-left: .3rem;
+    font-weight: 400;
+}
+footer{
+    padding: .8rem 0 1.5rem 1.3rem;
+}
+.ft{
+    display: flex;
+    align-items: center;
+}
+footer p{
+    color: var(--Soft-blue);
+    font-size: 12px;
+    font-weight: 300;
+    padding: .6rem;
+}
+footer span{
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--White);
+}
+footer span:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
+.avatar{
+    width: 30px;
+}
